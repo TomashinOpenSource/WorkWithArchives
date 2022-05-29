@@ -1276,8 +1276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd782c33954fb4f42967c240363e8072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  archivesPath: 
-  replaceableFilesPath: 
+  archivesPath: C:\Users\tomas\Desktop\Unpacked
+  replaceableFilesPath: C:\Users\tomas\Desktop\sps
   debugTextField: {fileID: 1397868335}
   filesInArchivesPath: []
   filesInReplaceableFilesPath: []

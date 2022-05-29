@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
         filesInArchivesPath = Directory.GetFiles(ArchivesPath);
         filesInReplaceableFilesPath = Directory.GetFiles(ReplaceableFilesPath);
 
+        StartCoroutine(Changing());
+    }
+
+    private IEnumerator Changing()
+    {
         foreach (var archivePath in filesInArchivesPath)
         {
             //string name = GetFileName(archivePath, true);
@@ -70,6 +75,7 @@ public class GameManager : MonoBehaviour
             oldZipArchiveEntry.Delete();
             DebugLog(string.Format("{0} -> {1} -> {2} -> {3}", archivePath, name, fileName, newZipArchiveEntry.FullName));
             zipArchive.Dispose();
+            yield return null;
         }
     }
 
